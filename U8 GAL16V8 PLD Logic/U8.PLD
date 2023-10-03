@@ -1,0 +1,48 @@
+/*************************************************/
+/* AtomTube U8: Address Decoding                 */
+/*************************************************/
+/* Rev 01: Copy from Hoglet with pin changes     */
+/* Rev 02: Pin 19 / A3 included in TUBE_OUT      */
+/*************************************************/
+
+Name     AtomTube-U8 ;
+PartNo   00          ;
+Date     10/02/2023  ;
+Revision 02          ;
+Designer Ken Lowe    ;
+Company  NA          ;
+Assembly None        ;
+Location             ;
+Device   G16V8       ;
+
+
+/* *************** INPUT PINS *********************/
+
+PIN 1     = Phi2;
+PIN 2     = A8;
+PIN 3     = A9;
+PIN 4     = A10;
+PIN 5     = A11;
+PIN 6     = A12;
+PIN 7     = A13;
+PIN 8     = A14;
+PIN 9     = A15;
+PIN 11    = RnW;
+PIN 13    = A7;
+PIN 14    = A6;
+PIN 17    = A5;
+PIN 18    = A4;
+PIN 19    = A3;
+
+/* *************** OUTPUT PINS *********************/
+
+PIN 12    = !RnW_OUT;
+PIN 15    = !TUBE_OUT;
+PIN 16    = !Phi2_OUT;
+
+/* *************** COMBINATORIAL OUTPUTS ***********/
+
+Phi2_OUT    = !Phi2;
+RnW_OUT     =  RnW;
+TUBE_OUT    =  (A15 & !A14 & A13 & A12 & A11 & A10 & A9 & !A8 & A7 & A6 & A5 & !A4 & !A3);
+

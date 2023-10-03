@@ -1,0 +1,27 @@
+# Berkeley PLA format generated using
+#
+# CUPL(WM)        5.0a Serial# 60008009
+# Device          g16v8s  Library DLIB-h-40-9
+# Created         Fri Feb 10 14:19:38 2023
+# Name            AtomTube-U8 
+# Partno          00          
+# Revision        02          
+# Date            10/02/2023  
+# Designer        Ken Lowe    
+# Company         NA          
+# Assembly        None        
+# Location        
+#
+# Inputs  A3 A4 A5 A6 
+#         A7 A8 A9 A10 
+#         A11 A12 A13 A14 
+#         A15 Phi2 !Phi2_OUT RnW 
+#         !RnW_OUT !TUBE_OUT 
+# Outputs !Phi2_OUT !RnW_OUT !TUBE_OUT 
+.i 18
+.o 3
+.p 3
+-------------0---- 1~~
+---------------1-- ~1~
+0011101111101----- ~~1
+.end
